@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Get Free Credit Repair Consultation | Catalyst Media</title>
+  <meta name="description" content="Contact Catalyst Media for a free credit repair consultation. Our experts will analyze your credit situation and create a personalized plan to improve your score.">
+  <link rel="canonical" href="https://yourdomain.com/contact.html">
+  <meta property="og:title" content="Contact Us - Get Free Credit Repair Consultation | Catalyst Media">
+  <meta property="og:description" content="Get a free credit repair consultation from our experts. Start your journey to better credit today.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/contact.html">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3498db;
+    }
+
+    .cta-button {
+      background: #3498db;
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #2980b9;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(135deg, #108cd9 0%, #045bb8 100%);
+      color: white;
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 80px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #2c3e50;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e1e8ed;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+
+    .form-group textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .btn-primary {
+      background: #e74c3c;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background: #c0392b;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      padding: 2rem;
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+
+    .contact-icon {
+      font-size: 2rem;
+      color: #3498db;
+      width: 50px;
+      text-align: center;
+    }
+
+    .contact-details h3 {
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-details p {
+      color: #7f8c8d;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-details a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: #f8f9fa;
+      padding: 80px 0;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .faq-item p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Map Section */
+    .map-section {
+      padding: 60px 0;
+    }
+
+    .map-container {
+      background: #e1e8ed;
+      height: 300px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7f8c8d;
+      font-size: 1.2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .contact-form {
+        padding: 2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="https://storage.googleapis.com/hostinger-horizons-assets-prod/aae80153-863b-4c5c-b244-6500b3f32ce4/2961d1389c78c85668a1f6257ef769ff.png" alt="Catalyst Media Logo">
+          <span class="logo-text">Catalyst Media</span>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="services.html">Services</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html" class="cta-button">Free Consultation</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Ready to take control of your credit? Get in touch with our experts for a free consultation and start your journey to financial freedom.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h2>Get Your Free Consultation</h2>
+          <form action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="currentScore">Current Credit Score (if known)</label>
+              <select id="currentScore" name="currentScore">
+                <option value="">Select your credit score range</option>
+                <option value="300-579">300-579 (Poor)</option>
+                <option value="580-669">580-669 (Fair)</option>
+                <option value="670-739">670-739 (Good)</option>
+                <option value="740-799">740-799 (Very Good)</option>
+                <option value="800-850">800-850 (Excellent)</option>
+                <option value="unknown">I don't know my score</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="goals">What are your credit goals? *</label>
+              <select id="goals" name="goals" required>
+                <option value="">Select your primary goal</option>
+                <option value="improve-score">Improve my credit score</option>
+                <option value="remove-errors">Remove errors from credit report</option>
+                <option value="qualify-mortgage">Qualify for a mortgage</option>
+                <option value="better-loans">Get better loan rates</option>
+                <option value="build-credit">Build credit from scratch</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Additional Information</label>
+              <textarea id="message" name="message" placeholder="Tell us more about your situation..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary">Get Free Consultation</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h3>Phone</h3>
+              <p><a href="tel:+1-555-123-4567">(555) 123-4567</a></p>
+              <p>Monday - Friday: 9 AM - 6 PM EST</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <p><a href="mailto:info.catalystmedia.co@gmail.com">info.catalystmedia.co@gmail.com</a></p>
+              <p>We respond within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h3>Office</h3>
+              <p>STE 314C, 1942 Broadway St.</p>
+              <p>Boulder, CO 80302</p>
+              <p>United States</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-details">
+              <h3>Business Hours</h3>
+              <p>Monday - Friday: 9 AM - 6 PM EST</p>
+              <p>Saturday: 10 AM - 2 PM EST</p>
+              <p>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #2c3e50;">Frequently Asked Questions</h2>
+      <p style="text-align: center; font-size: 1.1rem; color: #7f8c8d; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Get answers to common questions about our credit repair services</p>
+      
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Is the consultation really free?</h3>
+          <p>Yes! Our initial consultation is completely free with no obligation. We'll analyze your credit situation and provide recommendations without any cost to you.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How long does credit repair take?</h3>
+          <p>Most clients see significant improvements within 3-6 months, though results vary based on individual circumstances. We provide regular updates throughout the process.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What information do I need for the consultation?</h3>
+          <p>For the initial consultation, we just need basic contact information and a general understanding of your credit goals. We'll help you get your credit reports during the process.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do you guarantee results?</h3>
+          <p>While we can't guarantee specific results, we have a 95% success rate with our clients. We're committed to helping you achieve your credit goals and will work tirelessly on your behalf.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is credit repair legal?</h3>
+          <p>Absolutely! Credit repair is completely legal. The Fair Credit Reporting Act gives you the right to dispute inaccurate information on your credit reports. We help you exercise these rights effectively.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What if I'm not satisfied with the service?</h3>
+          <p>We offer a satisfaction guarantee. If you're not completely satisfied with our services, we'll work to make it right or provide a refund according to our terms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #2c3e50;">Visit Our Office</h2>
+      <p style="text-align: center; font-size: 1.1rem; color: #7f8c8d; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Schedule an in-person consultation at our Boulder office</p>
+      
+      <div class="map-container" style="max-width: 600px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.1234567890123!2d-105.2768!3d40.0175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDAxJzAzLjAiTiAxMDXCsDE2JzM2LjUiVw!5e0!3m2!1sen!2sus!4v1234567890123"
+          width="100%" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Catalyst Media office location at 1942 Broadway St, Boulder, CO">
+        </iframe>
+        
+        <div style="text-align: center; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          <p style="font-size: 1.2rem; color: #2c3e50; margin-bottom: 1rem; font-weight: 500;">📍 STE 314C, 1942 Broadway St. Boulder, CO, United States, 80302</p>
+          <a href="https://maps.google.com/maps?q=1942+Broadway+St,Boulder,CO" 
+             target="_blank" 
+             style="display: inline-block; background: #3498db; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 0.5rem; transition: background 0.3s; font-size: 1rem; font-weight: 500;">
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 3rem 0 1rem; margin-top: 4rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div style="text-align: center;">
+          <h3 style="color: #3498db; margin-bottom: 1rem; font-size: 1.3rem;">Catalyst Media</h3>
+          <p style="color: #bdc3c7; line-height: 1.6;">Your trusted partner in credit repair and financial empowerment.</p>
+        </div>
+        <div style="text-align: center;">
+          <h3 style="color: #3498db; margin-bottom: 1rem; font-size: 1.3rem;">Quick Links</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="index.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Home</a>
+            <a href="how-it-works.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">How It Works</a>
+            <a href="services.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Services</a>
+            <a href="testimonials.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Testimonials</a>
+            <a href="blog.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Blog</a>
+          </div>
+        </div>
+        <div style="text-align: center;">
+          <h3 style="color: #3498db; margin-bottom: 1rem; font-size: 1.3rem;">Services</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="services.html#credit-analysis" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Credit Analysis</a>
+            <a href="services.html#dispute-resolution" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Dispute Resolution</a>
+            <a href="services.html#score-improvement" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Score Improvement</a>
+            <a href="services.html#monitoring" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Credit Monitoring</a>
+          </div>
+        </div>
+        <div style="text-align: center;">
+          <h3 style="color: #3498db; margin-bottom: 1rem; font-size: 1.3rem;">Contact</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="contact.html" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Get Free Consultation</a>
+            <a href="tel:+1-555-123-4567" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">(555) 123-4567</a>
+            <a href="mailto:info.catalystmedia.co@gmail.com" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">info.catalystmedia.co@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #4a5f7a; padding-top: 1.5rem; text-align: center;">
+        <p style="color: #95a5a6; font-size: 0.9rem;">&copy; 2024 Catalyst Media. All rights reserved. | <a href="privacy.html" style="color: #3498db; text-decoration: none;">Privacy Policy</a> | <a href="terms.html" style="color: #3498db; text-decoration: none;">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 

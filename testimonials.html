@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Testimonials - Catalyst Media Credit Repair Success Stories</title>
+  <meta name="description" content="Read real success stories from Catalyst Media clients who improved their credit scores and achieved financial freedom. See how our credit repair services work.">
+  <link rel="canonical" href="https://yourdomain.com/testimonials.html">
+  <meta property="og:title" content="Client Testimonials - Catalyst Media Credit Repair Success Stories">
+  <meta property="og:description" content="Real success stories from clients who improved their credit scores with Catalyst Media.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/testimonials.html">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3498db;
+    }
+
+    .cta-button {
+      background: #3498db;
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #2980b9;
+    }
+
+    /* Page Header */
+    .page-header {
+      position: relative;
+      height: 50vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .header-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .header-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .page-header .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Stats Section */
+    .stats-section {
+      background: #f8f9fa;
+      padding: 60px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 2rem;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #7f8c8d;
+      font-size: 1.1rem;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      padding: 80px 0;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+      border-left: 5px solid #3498db;
+    }
+
+    .testimonial-card::before {
+      content: '“';
+      font-size: 4rem;
+      color: #3498db;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-family: serif;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 2rem;
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #3498db;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .author-info h4 {
+      color: #2c3e50;
+      margin-bottom: 0.25rem;
+    }
+
+    .author-info p {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+
+    .score-improvement {
+      background: #e8f5e8;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .score-improvement strong {
+      color: #27ae60;
+      font-size: 1.1rem;
+    }
+
+    /* Featured Testimonial */
+    .featured-testimonial {
+      position: relative;
+      background: linear-gradient(135deg, #108cd9 0%, #045bb8 100%);
+      color: white;
+      padding: 80px 0;
+      margin: 80px 0;
+      overflow: hidden;
+    }
+
+    .featured-testimonial::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+
+    .featured-testimonial .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .featured-testimonial .background-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .featured-testimonial .container {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .featured-testimonial h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .featured-quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .featured-author {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      background: #e74c3c;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #c0392b;
+    }
+
+    /* Footer */
+    footer {
+      background: #34495e;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      color: #3498db;
+    }
+
+    .footer-section a {
+      color: #bdc3c7;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section a:hover {
+      color: #3498db;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4a5f7a;
+      padding-top: 1rem;
+      color: #bdc3c7;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .testimonial-card {
+        padding: 2rem;
+      }
+
+      .featured-quote {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .close-button {
+        color: #aaa;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="https://storage.googleapis.com/hostinger-horizons-assets-prod/aae80153-863b-4c5c-b244-6500b3f32ce4/2961d1389c78c85668a1f6257ef769ff.png" alt="Catalyst Media Logo">
+          <span class="logo-text">Catalyst Media</span>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="services.html">Services</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html" class="cta-button">Free Consultation</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="header-background">
+      <img src="https://i.pinimg.com/736x/23/67/77/236777268a96077f0205fa92824a4dcb.jpg" alt="Client success stories with improved credit scores and financial freedom.">
+    </div>
+    <div class="container">
+      <h1>Client Success Stories</h1>
+      <p>Real testimonials from clients who transformed their financial future with Catalyst Media's credit repair services.</p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">2,500+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">150</div>
+          <div class="stat-label">Average Score Increase</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Average Months to Goal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Catalyst Media helped me improve my credit score by 180 points in just 8 months. I was struggling to get approved for a car loan, and now I have excellent credit and was able to buy my dream car with a great interest rate!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SJ</div>
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>Client since 2023</p>
+            </div>
+          </div>
+          <div class="score-improvement">
+            <strong>Score improved from 580 to 760</strong>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The team at Catalyst Media is incredibly professional and knowledgeable. They removed several errors from my credit report that I didn't even know existed. My credit score went up 140 points, and I finally qualified for a mortgage!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MC</div>
+            <div class="author-info">
+              <h4>Michael Chen</h4>
+              <p>Client since 2022</p>
+            </div>
+          </div>
+          <div class="score-improvement">
+            <strong>Score improved from 620 to 760</strong>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"I was skeptical at first, but Catalyst Media delivered amazing results. They helped me dispute multiple collection accounts and my credit score improved by 200 points. I can now get approved for credit cards and loans with great terms."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JD</div>
+            <div class="author-info">
+              <h4>Jennifer Davis</h4>
+              <p>Client since 2023</p>
+            </div>
+          </div>
+          <div class="score-improvement">
+            <strong>Score improved from 520 to 720</strong>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"After a divorce, my credit was in terrible shape. Catalyst Media helped me rebuild my credit step by step. They were patient, explained everything clearly, and now I have a credit score of 780. I'm so grateful for their help!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RW</div>
+            <div class="author-info">
+              <h4>Robert Wilson</h4>
+              <p>Client since 2022</p>
+            </div>
+          </div>
+          <div class="score-improvement">
+            <strong>Score improved from 450 to 780</strong>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The credit monitoring service from Catalyst Media is fantastic. I get alerts whenever there are changes to my credit report, and their team is always available to answer my questions. My credit score has improved by 160 points!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">LM</div>
+            <div class="author-info">
+              <h4>Lisa Martinez</h4>
+              <p>Client since 2023</p>
+            </div>
+          </div>
+          <div class="score-improvement">
+            <strong>Score improved from 600 to 760</strong>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">"I had medical collections that were dragging down my credit score. Catalyst Media helped me negotiate with the collection agencies and got most of them removed. My score went from 550 to 720, and I can finally breathe easier!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TB</div>
+            <div class="author-info">
+              <h4>Thomas Brown</h4>
+              <p>Client since 2023</p>
+            </div>
+          </div>
+          <div class="score-improvement">
+            <strong>Score improved from 550 to 720</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Testimonial -->
+  <section class="featured-testimonial">
+    <div class="background-image">
+      <img src="https://i.pinimg.com/736x/23/2d/41/232d41e99001412e785fe92a0fc9eb33.jpg" alt="Credit repair success story - financial transformation and improved credit score from 480 to 780 with Catalyst Media">
+    </div>
+    <div class="container">
+      <h2>Our Most Inspiring Success Story</h2>
+      <p class="featured-quote">"Catalyst Media didn't just fix my credit - they gave me back my financial confidence. I went from being denied for a basic credit card to qualifying for a mortgage with the best rates. The transformation has been life-changing."</p>
+      <p class="featured-author">- Amanda Rodriguez, Score improved from 480 to 780</p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Write Your Success Story?</h2>
+      <p>Join thousands of satisfied clients who have transformed their financial future with Catalyst Media. Start your credit repair journey today with a free consultation.</p>
+      <a href="contact.html" class="btn-primary">Get Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Catalyst Media</h3>
+          <p>Your trusted partner in credit repair and financial empowerment.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="services.html">Services</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <a href="services.html#credit-analysis">Credit Analysis</a>
+          <a href="services.html#dispute-resolution">Dispute Resolution</a>
+          <a href="services.html#score-improvement">Score Improvement</a>
+          <a href="services.html#monitoring">Credit Monitoring</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <a href="contact.html">Get Free Consultation</a>
+          <a href="tel:+1-555-123-4567">(555) 123-4567</a>
+          <a href="mailto:info@catalystmedia.com">info@catalystmedia.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Catalyst Media. All rights reserved. | <a href="#" onclick="openModal('privacy.html')">Privacy Policy</a> | <a href="#" onclick="openModal('terms.html')">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Container -->
+  <div id="modal" class="modal">
+      <div class="modal-content">
+          <span class="close-button" onclick="closeModal()">&times;</span>
+          <iframe id="modal-iframe" style="width:100%; height:60vh; border:none;"></iframe>
+      </div>
+  </div>
+
+  <script>
+    function openModal(src) {
+        document.getElementById('modal-iframe').src = src;
+        document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('modal-iframe').src = '';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('modal')) {
+            closeModal();
+        }
+    }
+  </script>
+</body>
+</html> 

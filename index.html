@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalyst Media - Fix Your Credit, Take Back Control</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Header Styles */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, #2E70B6, #004E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2E70B6;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #2E70B6, #004E8C);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(46, 112, 182, 0.3);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #e0e7ff 0%, #fff 50%, #e0e7ff 100%);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(46, 112, 182, 0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-text .highlight {
+      background: linear-gradient(135deg, #2E70B6, #004E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-text p {
+      font-size: 1.25rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2E70B6, #004E8C);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(46, 112, 182, 0.3);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #2E70B6;
+      border: 2px solid #2E70B6;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+       text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background: #2E70B6;
+      color: white;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, #2E70B6, #004E8C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #2E70B6;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 4rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* How It Works */
+    .how-it-works {
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .step {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-10px);
+    }
+
+    .step-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #2E70B6, #004E8C);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: white;
+    }
+
+    .step h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .step p {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* Services */
+    .services {
+      background: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+      padding: 2.5rem;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .service-card:hover {
+      border-color: #2E70B6;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(46, 112, 182, 0.15);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #2E70B6, #004E8C);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: white;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: linear-gradient(135deg, #1e293b 0%, #2E70B6 100%);
+      color: white;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .author-info h4 {
+      font-weight: 600;
+    }
+
+    .author-info p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+    }
+
+    /* Contact */
+    .contact {
+      background: linear-gradient(135deg, #f8fafc, #e0e7ff);
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #2E70B6;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e0e7ff;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #2E70B6;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #1e293b 0%, #2E70B6 100%);
+      color: white;
+      padding: 3rem 0 1rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-section a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+      }
+
+      nav {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 100px 0 60px;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="https://storage.googleapis.com/hostinger-horizons-assets-prod/aae80153-863b-4c5c-b244-6500b3f32ce4/2961d1389c78c85668a1f6257ef769ff.png" alt="Catalyst Media Logo">
+          <span class="logo-text">Catalyst Media</span>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="services.html">Services</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html" class="cta-button">Free Consultation</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Fix Your Credit, <span class="highlight">Take Back Control</span></h1>
+          <p>Transform your financial future with our proven credit repair strategies. Join thousands who've improved their credit scores and unlocked better opportunities.</p>
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn-primary">Get Free Consultation</a>
+            <a href="how-it-works.html" class="btn-secondary">Learn How It Works</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">98%</div>
+              <div>Success Rate</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1000+</div>
+              <div>Clients Helped</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">150+</div>
+              <div>Points Improved</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1675270714610-11a5cadcc7b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Credit Repair Success">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Preview -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Our proven process helps you repair your credit and build a brighter financial future in just a few simple steps.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">📝</div>
+          <h3>1. Free Credit Consultation</h3>
+          <p>We review your credit report and discuss your goals to create a personalized plan for improvement.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🔍</div>
+          <h3>2. Dispute & Repair</h3>
+          <p>We challenge inaccurate, outdated, or unverifiable items on your credit report with all major bureaus.</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🚀</div>
+          <h3>3. Results & Guidance</h3>
+          <p>See real improvements in your credit score and receive ongoing advice to maintain your financial health.</p>
+      </div>
+      </div>
+       <div style="text-align:center; margin-top:2rem;">
+        <a href="how-it-works.html" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Comprehensive solutions to help you achieve your credit and financial goals.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Credit Repair</h3>
+          <p>Remove inaccurate, outdated, or unverifiable items from your credit report and boost your score with our expert dispute process.</p>
+      </div>
+        <div class="service-card">
+          <div class="service-icon">💡</div>
+          <h3>Financial Coaching</h3>
+          <p>Get expert advice on budgeting, debt management, and building healthy financial habits for long-term success.</p>
+    </div>
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Credit Monitoring</h3>
+          <p>Stay on top of your credit with real-time alerts, monthly progress reports, and identity theft protection.</p>
+        </div>
+      </div>
+        <div style="text-align:center; margin-top:2rem;">
+        <a href="services.html" class="btn-secondary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Preview -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "Catalyst Media helped me raise my credit score by over 100 points in just a few months. Their team is knowledgeable, supportive, and truly cares about your success."
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Jessica R." class="testimonial-avatar">
+            <div class="author-info">
+              <h4>Jessica R.</h4>
+              <p>Orlando, FL</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-text">
+            "I never thought I'd be able to buy a home, but Catalyst Media made it possible. They explained everything clearly and kept me updated every step of the way."
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael T." class="testimonial-avatar">
+            <div class="author-info">
+              <h4>Michael T.</h4>
+              <p>Dallas, TX</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div style="text-align:center; margin-top:2rem;">
+        <a href="testimonials.html" class="btn-secondary">Read More Testimonials</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Preview -->
+    <section class="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">Ready to take control of your credit? Fill out the form on our contact page and our team will reach out to you soon.</p>
+         <div style="text-align:center;">
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo" style="margin-bottom: 1rem;">
+            <img src="https://storage.googleapis.com/hostinger-horizons-assets-prod/aae80153-863b-4c5c-b244-6500b3f32ce4/2961d1389c78c85668a1f6257ef769ff.png" alt="Catalyst Media Logo">
+            <span class="logo-text">Catalyst Media</span>
+          </div>
+          <p style="color: #cbd5e1; margin-bottom: 1rem;">Empowering you to take control of your credit and financial future.</p>
+          <p style="color: #cbd5e1;">📞 (555) 123-4567</p>
+          <p style="color: #cbd5e1;">✉️ info.catalystmedia.co@gmail.com</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul style="list-style: none; line-height: 2;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <a href="https://web.facebook.com/profile.php?id=61571846965395" style="color: #cbd5e1; font-size: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="#1877F2">
+              <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.342v21.317C0 23.4.6 24 1.325 24h11.495V14.708H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.1 2.795.144v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123V24h6.116C23.4 24 24 23.4 24 22.675V1.342C24 .6 23.4 0 22.675 0z"/>
+            </svg>
+            </a>
+            <a href="https://twitter.com/catalystmedia" style="color: #cbd5e1; font-size: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="#000000">
+              <path d="M22.162 0H1.837C.822 0 0 .822 0 1.837v20.325C0 23.178.822 24 1.837 24h20.325C23.178 24 24 23.178 24 22.162V1.837C24 .822 23.178 0 22.162 0zM18.475 17.372h-2.138l-3.447-4.495-3.951 4.495H6.21l5.214-5.935L6.529 6.628h2.261l3.09 4.12 3.613-4.12h2.062l-4.894 5.678 4.614 5.066z"/>
+            </svg>
+            </a>
+            <a href="https://www.instagram.com/catalystmedia.x/" style="color: #cbd5e1; font-size: 1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="#E1306C">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.263 2.242 1.325 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.325 3.608-.975.975-2.242 1.263-3.608 1.325-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.263-2.242-1.325-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.325-3.608.975-.975 2.242-1.263 3.608-1.325C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.736 0 8.332.012 7.052.07 5.773.127 4.697.42 3.785 1.332 2.873 2.244 2.58 3.32 2.523 4.598.465 6.875.453 8.279.453 12s.012 5.125.07 6.403c.057 1.278.35 2.354 1.262 3.266.912.912 1.988 1.205 3.266 1.262C8.332 23.988 8.736 24 12 24s3.668-.012 4.948-.07c1.278-.057 2.354-.35 3.266-1.262.912-.912 1.205-1.988 1.262-3.266.058-1.278.07-1.682.07-4.948s-.012-3.668-.07-4.948c-.057-1.278-.35-2.354-1.262-3.266-.912-.912-1.988-1.205-3.266-1.262C15.668.012 15.264 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+            </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Catalyst Media. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
