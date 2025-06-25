@@ -328,6 +328,16 @@
         padding: 2rem;
       }
     }
+
+    .hamburger[aria-expanded="true"] span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
   </style>
 </head>
 <body>
@@ -339,15 +349,26 @@
           <a href="/"><img src="https://i.ibb.co/mFCvyhmC/My-Logo.png" alt="Catalyst Media Logo"></a>
           <a href="/" class="logo-text">Catalyst Media</a>
         </div>
-        <nav>
-          <a href="index">Home</a>
-          <a href="how-it-works">How It Works</a>
-          <a href="services">Services</a>
-          <a href="testimonials">Testimonials</a>
-          <a href="blog">Blog</a>
-          <a href="contact" class="cta-button">Free Consultation</a>
+        <button class="hamburger" aria-label="Open navigation menu" aria-controls="mobile-nav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="desktop-nav">
+          <a href="/">Home</a>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/services">Services</a>
+          <a href="/testimonials">Testimonials</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact" class="cta-button">Free Consultation</a>
         </nav>
       </div>
+      <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="/">Home</a>
+        <a href="/how-it-works">How It Works</a>
+        <a href="/services">Services</a>
+        <a href="/testimonials">Testimonials</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact" class="cta-button">Free Consultation</a>
+      </nav>
     </div>
   </header>
 
@@ -517,5 +538,30 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  // Hamburger menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  hamburger.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    mobileNav.classList.toggle('open');
+  });
+  // Close mobile menu when a link is clicked
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+      mobileNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
+  </script>
 </body>
 </html> 
