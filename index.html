@@ -490,9 +490,12 @@
         width: 100%;
         text-align: center;
       }
-      .hero {
-        padding-top: 140px;
-        padding-bottom: 60px;
+      .hero, .page-header {
+        padding-top: 0 !important;
+      }
+      .hero > .container,
+      .page-header > .container {
+        margin-top: 80px;
       }
       .hero-content {
         grid-template-columns: 1fr;
