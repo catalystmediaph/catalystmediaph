@@ -853,7 +853,7 @@
     });
   });
   // Close menu when clicking outside
-  window.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
       mobileNav.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
