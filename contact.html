@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Free Credit Consultation | Catalyst Media</title>
   <meta name="description" content="Contact Catalyst Media for a free credit repair consultation. Our experts are ready to help you improve your credit score and achieve your financial goals.">
-
-  <!-- ✅ Canonical URL -->
   <link rel="canonical" href="https://catalystmediaph.pro/contact">
-
-  <!-- ✅ Open Graph Tags -->
   <meta property="og:title" content="Contact Us - Free Credit Consultation | Catalyst Media">
   <meta property="og:description" content="Contact Catalyst Media for a free credit repair consultation. Our experts are ready to help you improve your credit score and achieve your financial goals.">
   <meta property="og:url" content="https://catalystmediaph.pro/contact">
@@ -17,75 +13,17 @@
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="favicon.png.png">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header */
-    header {
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      height: 40px;
-      width: auto;
-    }
-
-    .logo-text {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #2c3e50;
-    }
-
-    .desktop-nav {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .desktop-nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .desktop-nav a:hover {
-      color: #3498db;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo img { height: 40px; width: auto; }
+    .logo-text { font-size: 1.5rem; font-weight: bold; color: #2c3e50; }
+    nav.desktop-nav { display: flex; gap: 2rem; align-items: center; }
+    nav.desktop-nav a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+    nav.desktop-nav a:hover { color: #3498db; }
     .hamburger {
       display: none;
       flex-direction: column;
@@ -98,7 +36,6 @@
       cursor: pointer;
       z-index: 1100;
     }
-
     .hamburger span {
       display: block;
       width: 28px;
@@ -108,18 +45,16 @@
       border-radius: 2px;
       transition: 0.3s;
     }
-
-    .hamburger[aria-expanded="true"] span:nth-child(1) {
+    .hamburger.active span:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
-    .hamburger[aria-expanded="true"] span:nth-child(2) {
+    .hamburger.active span:nth-child(2) {
       opacity: 0;
     }
-    .hamburger[aria-expanded="true"] span:nth-child(3) {
+    .hamburger.active span:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px);
     }
-
-    .mobile-nav {
+    nav.mobile-nav {
       display: none;
       flex-direction: column;
       background: #fff;
@@ -134,13 +69,11 @@
       overflow: hidden;
       max-height: 0;
     }
-
-    .mobile-nav.open {
+    nav.mobile-nav.open {
       display: flex;
       max-height: 500px;
     }
-
-    .mobile-nav a {
+    nav.mobile-nav a {
       padding: 1rem 2rem;
       font-size: 1.1rem;
       color: #2E70B6;
@@ -149,12 +82,8 @@
       border-bottom: 1px solid #e0e7ff;
       transition: background 0.2s;
     }
-
-    .mobile-nav a:last-child {
-      border-bottom: none;
-    }
-
-    .mobile-nav a.cta-button {
+    nav.mobile-nav a:last-child { border-bottom: none; }
+    nav.mobile-nav a.cta-button {
       background: linear-gradient(135deg, #2E70B6, #004E8C);
       color: #fff;
       border-radius: 25px;
@@ -162,246 +91,19 @@
       text-align: center;
       border: none;
     }
-
     @media (max-width: 900px) {
-      .desktop-nav {
-        gap: 1rem;
-      }
+      nav.desktop-nav { gap: 1rem; }
     }
-
     @media (max-width: 768px) {
-      .desktop-nav {
-        display: none;
-      }
-      .hamburger {
-        display: flex;
-      }
-      .logo img {
-        width: 32px;
-        height: 32px;
-      }
-      .logo-text {
-        font-size: 1.2rem;
-      }
-      .header-content {
-        height: 56px;
-      }
-      .mobile-nav {
-        display: none;
-      }
-      .mobile-nav.open {
-        display: flex;
-        max-height: 500px;
-      }
+      nav.desktop-nav { display: none; }
+      .hamburger { display: flex; }
+      .logo img { width: 32px; height: 32px; }
+      .logo-text { font-size: 1.2rem; }
+      .header-content { height: 56px; }
+      nav.mobile-nav { display: none; }
+      nav.mobile-nav.open { display: flex; max-height: 500px; }
       .hero > .container,
-      .page-header > .container {
-        margin-top: 64px;
-      }
-      .form-group {
-        margin-bottom: 1.5rem;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        color: #2c3e50;
-      }
-
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 12px;
-        border: 2px solid #e1e8ed;
-        border-radius: 8px;
-        font-size: 1rem;
-        transition: border-color 0.3s;
-      }
-
-      .form-group input:focus,
-      .form-group select:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: #3498db;
-      }
-
-      .form-group textarea {
-        height: 120px;
-        resize: vertical;
-      }
-
-      .form-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-
-      .btn-primary {
-        background: #e74c3c;
-        color: white;
-        padding: 15px 30px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        display: inline-block;
-        transition: background 0.3s;
-        border: none;
-        cursor: pointer;
-        font-size: 1rem;
-        width: 100%;
-      }
-
-      .btn-primary:hover {
-        background: #c0392b;
-      }
-
-      /* Contact Info */
-      .contact-info {
-        padding: 2rem;
-      }
-
-      .contact-info h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: #2c3e50;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 2rem;
-        padding: 1.5rem;
-        background: #f8f9fa;
-        border-radius: 10px;
-      }
-
-      .contact-icon {
-        font-size: 2rem;
-        color: #3498db;
-        width: 50px;
-        text-align: center;
-      }
-
-      .contact-details h3 {
-        color: #2c3e50;
-        margin-bottom: 0.5rem;
-      }
-
-      .contact-details p {
-        color: #7f8c8d;
-        margin-bottom: 0.25rem;
-      }
-
-      .contact-details a {
-        color: #3498db;
-        text-decoration: none;
-      }
-
-      .contact-details a:hover {
-        text-decoration: underline;
-      }
-
-      /* FAQ Section */
-      .faq-section {
-        background: #f8f9fa;
-        padding: 80px 0;
-      }
-
-      .faq-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-      }
-
-      .faq-item {
-        background: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      }
-
-      .faq-item h3 {
-        color: #2c3e50;
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-      }
-
-      .faq-item p {
-        color: #666;
-        line-height: 1.6;
-      }
-
-      /* Map Section */
-      .map-section {
-        padding: 60px 0;
-      }
-
-      .map-container {
-        background: #e1e8ed;
-        height: 300px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #7f8c8d;
-        font-size: 1.2rem;
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        .header-content {
-          flex-direction: column;
-          height: auto;
-          padding: 1rem 0;
-        }
-        nav {
-          margin-top: 1rem;
-          flex-direction: column;
-          align-items: stretch;
-          gap: 0.5rem;
-        }
-        .cta-button {
-          margin-top: 0.5rem;
-          width: 100%;
-          text-align: center;
-        }
-        .hero, .page-header {
-          padding-top: 0 !important;
-        }
-        .hero > .container,
-        .page-header > .container {
-          margin-top: 80px;
-        }
-        .page-header h1 {
-          font-size: 2rem;
-        }
-        .contact-grid {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-        }
-        .contact-form {
-          padding: 2rem;
-        }
-        .form-row {
-          grid-template-columns: 1fr;
-        }
-        .faq-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .hamburger[aria-expanded="true"] span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      .hamburger[aria-expanded="true"] span:nth-child(2) {
-        opacity: 0;
-      }
-      .hamburger[aria-expanded="true"] span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-      }
+      .page-header > .container { margin-top: 64px; }
     }
   </style>
 </head>
@@ -448,9 +150,9 @@
   <!-- Contact Section -->
   <section class="contact-section">
     <div class="container">
-      <div class="contact-grid">
+      <div class="contact-grid" style="display: flex; flex-wrap: wrap; gap: 2rem;">
         <!-- Contact Form -->
-        <div class="contact-form">
+        <div class="contact-form" style="flex: 1 1 350px; min-width: 320px; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 2rem;">
           <h2>Get Your Free Consultation</h2>
           <form id="contactForm" action="https://tylerjayce.app.n8n.cloud/webhook/credit-repair-leads" method="POST">
             <div class="form-group">
@@ -476,12 +178,12 @@
                 <option value="820">800+ (Excellent)</option>
               </select>
             </div>
-            <div class="form-row">
-              <div class="form-group">
+            <div class="form-row" style="display: flex; gap: 1rem;">
+              <div class="form-group" style="flex: 1;">
                 <label for="annualIncome">Annual Income *</label>
                 <input type="text" id="annualIncome" name="annualIncome" required>
               </div>
-              <div class="form-group">
+              <div class="form-group" style="flex: 1;">
                 <label for="totalDebt">Total Debt Amount *</label>
                 <input type="text" id="totalDebt" name="debtAmount" required>
               </div>
@@ -510,50 +212,45 @@
                 <label><input type="radio" name="previousRepair" value="No" required> No</label>
               </div>
             </div>
-            <button type="submit" class="btn-primary">Submit</button>
+            <button type="submit" class="btn-primary" style="background: #e74c3c; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; transition: background 0.3s; border: none; cursor: pointer; font-size: 1rem; width: 100%;">Submit</button>
           </form>
           <div id="thankYouMessage" style="display:none; text-align:center; padding:2rem; font-size:1.3rem; color:#2c3e50; font-weight:500;">Thank you for contacting us! We have received your information and will get back to you soon.</div>
         </div>
-
         <!-- Contact Info -->
-        <div class="contact-info">
+        <div class="contact-info" style="flex: 1 1 300px; min-width: 280px; background: #f8f9fa; border-radius: 10px; padding: 2rem;">
           <h2>Get in Touch</h2>
-          
-          <div class="contact-item">
-            <div class="contact-icon">📞</div>
+          <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding: 1.5rem; background: #fff; border-radius: 10px;">
+            <div class="contact-icon" style="font-size: 2rem; color: #3498db; width: 50px; text-align: center;">📞</div>
             <div class="contact-details">
-              <h3>Phone</h3>
-              <p><a href="tel:+1-555-123-4567">(555) 123-4567</a></p>
-              <p>Monday - Friday: 9 AM - 6 PM EST</p>
+              <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Phone</h3>
+              <p><a href="tel:+1-555-123-4567" style="color: #3498db; text-decoration: none;">(555) 123-4567</a></p>
+              <p style="color: #7f8c8d;">Monday - Friday: 9 AM - 6 PM EST</p>
             </div>
           </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">✉️</div>
+          <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding: 1.5rem; background: #fff; border-radius: 10px;">
+            <div class="contact-icon" style="font-size: 2rem; color: #3498db; width: 50px; text-align: center;">✉️</div>
             <div class="contact-details">
-              <h3>Email</h3>
-              <p><a href="mailto:info.catalystmedia.co@gmail.com">info.catalystmedia.co@gmail.com</a></p>
-              <p>We respond within 24 hours</p>
+              <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Email</h3>
+              <p><a href="mailto:info.catalystmedia.co@gmail.com" style="color: #3498db; text-decoration: none;">info.catalystmedia.co@gmail.com</a></p>
+              <p style="color: #7f8c8d;">We respond within 24 hours</p>
             </div>
           </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">📍</div>
+          <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding: 1.5rem; background: #fff; border-radius: 10px;">
+            <div class="contact-icon" style="font-size: 2rem; color: #3498db; width: 50px; text-align: center;">📍</div>
             <div class="contact-details">
-              <h3>Office</h3>
+              <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Office</h3>
               <p>STE 314C, 1942 Broadway St.</p>
               <p>Boulder, CO 80302</p>
               <p>United States</p>
             </div>
           </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">⏰</div>
+          <div class="contact-item" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding: 1.5rem; background: #fff; border-radius: 10px;">
+            <div class="contact-icon" style="font-size: 2rem; color: #3498db; width: 50px; text-align: center;">⏰</div>
             <div class="contact-details">
-              <h3>Business Hours</h3>
-              <p>Monday - Friday: 9 AM - 6 PM EST</p>
-              <p>Saturday: 10 AM - 2 PM EST</p>
-              <p>Sunday: Closed</p>
+              <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Business Hours</h3>
+              <p style="color: #7f8c8d;">Monday - Friday: 9 AM - 6 PM EST</p>
+              <p style="color: #7f8c8d;">Saturday: 10 AM - 2 PM EST</p>
+              <p style="color: #7f8c8d;">Sunday: Closed</p>
             </div>
           </div>
         </div>
@@ -562,51 +259,44 @@
   </section>
 
   <!-- FAQ Section -->
-  <section class="faq-section">
+  <section class="faq-section" style="background: #f8f9fa; padding: 80px 0;">
     <div class="container">
       <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #2c3e50;">Frequently Asked Questions</h2>
       <p style="text-align: center; font-size: 1.1rem; color: #7f8c8d; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Get answers to common questions about our credit repair services</p>
-      
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h3>Is the consultation really free?</h3>
-          <p>Yes! Our initial consultation is completely free with no obligation. We'll analyze your credit situation and provide recommendations without any cost to you.</p>
+      <div class="faq-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div class="faq-item" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.2rem;">Is the consultation really free?</h3>
+          <p style="color: #666; line-height: 1.6;">Yes! Our initial consultation is completely free with no obligation. We'll analyze your credit situation and provide recommendations without any cost to you.</p>
         </div>
-
-        <div class="faq-item">
-          <h3>How long does credit repair take?</h3>
-          <p>Most clients see significant improvements within 3-6 months, though results vary based on individual circumstances. We provide regular updates throughout the process.</p>
+        <div class="faq-item" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.2rem;">How long does credit repair take?</h3>
+          <p style="color: #666; line-height: 1.6;">Most clients see significant improvements within 3-6 months, though results vary based on individual circumstances. We provide regular updates throughout the process.</p>
         </div>
-
-        <div class="faq-item">
-          <h3>What information do I need for the consultation?</h3>
-          <p>For the initial consultation, we just need basic contact information and a general understanding of your credit goals. We'll help you get your credit reports during the process.</p>
+        <div class="faq-item" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.2rem;">What information do I need for the consultation?</h3>
+          <p style="color: #666; line-height: 1.6;">For the initial consultation, we just need basic contact information and a general understanding of your credit goals. We'll help you get your credit reports during the process.</p>
         </div>
-
-        <div class="faq-item">
-          <h3>Do you guarantee results?</h3>
-          <p>While we can't guarantee specific results, we have a 95% success rate with our clients. We're committed to helping you achieve your credit goals and will work tirelessly on your behalf.</p>
+        <div class="faq-item" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.2rem;">Do you guarantee results?</h3>
+          <p style="color: #666; line-height: 1.6;">While we can't guarantee specific results, we have a 95% success rate with our clients. We're committed to helping you achieve your credit goals and will work tirelessly on your behalf.</p>
         </div>
-
-        <div class="faq-item">
-          <h3>Is credit repair legal?</h3>
-          <p>Absolutely! Credit repair is completely legal. The Fair Credit Reporting Act gives you the right to dispute inaccurate information on your credit reports. We help you exercise these rights effectively.</p>
+        <div class="faq-item" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.2rem;">Is credit repair legal?</h3>
+          <p style="color: #666; line-height: 1.6;">Absolutely! Credit repair is completely legal. The Fair Credit Reporting Act gives you the right to dispute inaccurate information on your credit reports. We help you exercise these rights effectively.</p>
         </div>
-
-        <div class="faq-item">
-          <h3>What if I'm not satisfied with the service?</h3>
-          <p>We offer a satisfaction guarantee. If you're not completely satisfied with our services, we'll work to make it right or provide a refund according to our terms.</p>
+        <div class="faq-item" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <h3 style="color: #2c3e50; margin-bottom: 1rem; font-size: 1.2rem;">What if I'm not satisfied with the service?</h3>
+          <p style="color: #666; line-height: 1.6;">We offer a satisfaction guarantee. If you're not completely satisfied with our services, we'll work to make it right or provide a refund according to our terms.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Map Section -->
-  <section class="map-section">
+  <section class="map-section" style="padding: 60px 0;">
     <div class="container">
       <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #2c3e50;">Visit Our Office</h2>
       <p style="text-align: center; font-size: 1.1rem; color: #7f8c8d; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Schedule an in-person consultation at our Boulder office</p>
-      
       <div class="map-container" style="max-width: 600px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden;">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.1234567890123!2d-105.2768!3d40.0175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDAxJzAzLjAiTiAxMDXCsDE2JzM2LjUiVw!5e0!3m2!1sen!2sus!4v1234567890123"
@@ -618,7 +308,6 @@
           referrerpolicy="no-referrer-when-downgrade"
           title="Catalyst Media office location at 1942 Broadway St, Boulder, CO">
         </iframe>
-        
         <div style="text-align: center; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
           <p style="font-size: 1.2rem; color: #2c3e50; margin-bottom: 1rem; font-weight: 500;">📍 STE 314C, 1942 Broadway St. Boulder, CO, United States, 80302</p>
           <a href="https://maps.google.com/maps?q=1942+Broadway+St,Boulder,CO" 
@@ -667,7 +356,7 @@
           </div>
         </div>
       </div>
-      <div style="border-top: 1px solid #4a5f7a; padding-top: 1.5rem; text-align: center;">
+      <div style="border-top: 1px solid #4a5f7a; padding-top: 1.5rem; text-align: center;"></div>
         <p style="color: #95a5a6; font-size: 0.9rem;">&copy; 2024 Catalyst Media. All rights reserved. | <a href="privacy" style="color: #3498db; text-decoration: none;">Privacy Policy</a> | <a href="terms" style="color: #3498db; text-decoration: none;">Terms of Service</a></p>
       </div>
     </div>
@@ -705,30 +394,29 @@
           }
         });
       }
-    });
 
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const mobileNav = document.getElementById('mobile-nav');
-    hamburger.addEventListener('click', function() {
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !expanded);
-      mobileNav.classList.toggle('open');
-    });
-    // Close mobile menu when a link is clicked
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+      // Hamburger menu toggle
+      const hamburger = document.querySelector('.hamburger');
+      const mobileNav = document.getElementById('mobile-nav');
+      hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mobileNav.classList.toggle('open');
       });
-    });
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
+      // Close mobile menu when a link is clicked
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          hamburger.classList.remove('active');
+        });
+      });
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+          mobileNav.classList.remove('open');
+          hamburger.classList.remove('active');
+        }
+      });
     });
   </script>
 </body>
-</html> 
+</html>
